@@ -5,9 +5,13 @@
 ```
 docker run  --name some-name -e BOT_TOKEN=your_telegram_token -e DB_ADDRESS=postgres_ip -e DB_PORT=postgres_port -e DB_NAME=postgres_db_name -e DB_USER=postgres_db_user -e DB_PASSWORD=postgres_db_password  -d khdev/translate
 ```
-
-
-
+* **-e BOT_TOKEN** is the parameter that, token your bot (from BotFather).
+* **-e DB_ADDRESS** is the parameter that, IP Address your postgres server (is you don't have db server, you can run the command below from requirements).
+* **-e DB_PORT** is the parameter that, port your postgres server.
+* **-e DB_NAME** is the parameter that, database name your postgres server.
+* **-e DB_USER** is the parameter that, username your postgres server.
+* **-e DB_PASSWORD** is the parameter that, password your postgres server.
+* **-d** is the parameter that runs the Docker Container in the detached mode, i.e., in the background. If you accidentally close or terminate the Command Prompt, the Docker Container will still run in the background.
 
 ## requirements postgresql
 ```
