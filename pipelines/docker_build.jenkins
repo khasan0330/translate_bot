@@ -20,7 +20,7 @@ pipeline {
         stage("create docker image") {
             steps {
                 echo "------------------( start building )-------------------"
-                dir('./') {
+                dir('docker/') {
                     sh 'docker build -t khdev/translate:latest .'
                 }
             }

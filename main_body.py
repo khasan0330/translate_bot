@@ -1,5 +1,5 @@
-from database import db_history_write, db_history_read
-from keyboards import generate_languages,  LANGUAGES, get_key_from_value
+from library.database import db_history_write, db_history_read
+from library.keyboards import generate_languages,  LANGUAGES, get_key_from_value
 
 from googletrans import Translator
 
