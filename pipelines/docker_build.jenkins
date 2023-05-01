@@ -1,0 +1,38 @@
+pipeline {
+    agent any
+    options {
+        timestamps()
+    }
+
+    stages {
+        stage("docker login") {
+            steps {
+                echo "------------------( docker login )-------------------"
+                withCredentials([usernamePassword(credentialsId: 'dockerhub_micros', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                    sh """
+                    echo $PASSWORD | docker login -u $USERNAME --password-stdin
+                    """
+                }
+
+            }
+        }
+
+        stage("create docker image") {
+            steps {
+                echo "------------------( start building )-------------------"
+                dir('./') {
+                    sh 'docker build -t khdev/translate:latest .'
+                }
+            }
+        }
+
+        stage("docker push") {
+            steps {
+               echo "------------------( push image to hub.docker)-------------------"
+                sh """
+                docker push khdev/translate:latest
+                """
+            }
+        }
+    }
+}
