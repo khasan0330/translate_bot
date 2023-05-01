@@ -22,3 +22,6 @@ docker run  --name some-name -p 5432:5432 -e POSTGRES_PASSWORD=your_password -d 
 * **-e POSTGRES_PASSWORD** is the parameter that allows you to set the password of the Postgres database.
 * **-d** is the parameter that runs the Docker Container in the detached mode, i.e., in the background. If you accidentally close or terminate the Command Prompt, the Docker Container will still run in the background.
 * **postgres** is the name of the Docker image that was previously downloaded to run the Docker Container.
+
+## Work illustrations
+![HEADER](https://github.com/khasan0330/translate_bot/blob/main/png/01.png)
