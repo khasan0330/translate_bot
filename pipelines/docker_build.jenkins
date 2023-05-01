@@ -21,7 +21,7 @@ pipeline {
             steps {
                 echo "------------------( start building )-------------------"
                 dir('docker/') {
-                    sh 'docker build -t khdev/translate:latest ../'
+                    sh 'docker build -t khdev/translate:latest .'
                 }
             }
         }
