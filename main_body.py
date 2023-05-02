@@ -33,9 +33,9 @@ async def command_start(message: Message):
         await message.answer('здравствуйте, Вас приветствует бот переводчик')
         await start_questions(message)
     elif message.text == '/help':
-        await message.answer('Если у вас возникли проблемы то пишите сюда')
+        await message.answer('Раздел для помощи, в стадии разработки')
     elif message.text == '/about':
-        await message.answer('Данный бот был создан при поддержки micros')
+        await message.answer('Данный бот был создан в учебном центре micros')
     elif message.text == '/history':
         await get_history(message)
 
