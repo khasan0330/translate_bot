@@ -34,5 +34,15 @@ pipeline {
                 """
             }
         }
+
+        stage("docker update") {
+            steps {
+                echo "------------------( docker container update)-------------------"
+                sh "ssh root@server 'update_translate_bot'"
+
+            }
+        }
+
+
     }
 }
