@@ -35,7 +35,7 @@ async def command_start(message: Message):
     elif message.text == '/help':
         await message.answer('Раздел для помощи, в стадии разработки')
     elif message.text == '/about':
-        await message.answer('Данный бот был создан в учебном центре micros')
+        await message.answer('Данный бот был создан в учебном центре micros, для справки @KhasanKarabayev')
     elif message.text == '/history':
         await get_history(message)
 
