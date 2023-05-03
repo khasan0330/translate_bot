@@ -25,8 +25,8 @@ def create_table():
             telegram_id BIGINT,
             src VARCHAR(30),
             dst VARCHAR(30),
-            original_text VARCHAR(100),
-            translate_text VARCHAR(100)
+            original_text VARCHAR,
+            translate_text VARCHAR
         )
     ''')
     database.commit()
