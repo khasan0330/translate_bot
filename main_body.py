@@ -30,7 +30,7 @@ class Questions(StatesGroup):
 async def command_start(message: Message):
     """Приветствие пользователя"""
     if message.text == '/start':
-        await message.answer('здравствуйте, Вас приветствует бот переводчик........')
+        await message.answer('здравствуйте, Вас приветствует бот переводчик')
         await start_questions(message)
     elif message.text == '/help':
         await message.answer('Раздел для помощи, в стадии разработки от TIUE')
